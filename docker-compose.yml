@@ -1,0 +1,48 @@
+version: '3.9'
+
+networks:
+  app-network:
+    driver: bridge
+
+services:
+  db:
+    image: mysql:8.1
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: transporteSW0608
+      MYSQL_DATABASE: tituladosv2
+    ports:
+      - "3310:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./tituladosv2.sql:/docker-entrypoint-initdb.d/tituladosv2.sql:ro
+    networks:
+      - app-network
+
+  backend:
+    build:
+      context: ./titulados-api-v2-test
+    env_file:
+      - ./titulados-api-v2-test/.env
+    ports:
+      - "4300:4300"
+    depends_on:
+      - db
+    networks:
+      - app-network
+    volumes:
+      - ./titulados-api-v2-test/src/archivos:/app/src/archivos
+  frontend:
+    build:
+      context: ./titulados-pruebas-locales
+    env_file:
+      - ./titulados-pruebas-locales/.env
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+volumes:
+  db-data:

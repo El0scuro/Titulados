@@ -1,0 +1,605 @@
+"use client";
+import { useEffect, useState, useMemo} from "react";
+import React from 'react'
+import { Box, Button, Stack, TextField} from '@mui/material'; // Added Select, MenuItem, FormControl, InputLabel
+import { Typography } from '@mui/material';
+import { DataGrid } from '@mui/x-data-grid';
+import { GridColDef} from '@mui/x-data-grid';
+import { Asignacion } from '@/types/asignacion';
+import axios from 'axios';
+import __url from '@/lib/const';
+import { Estudiante } from "@/types/estudiante";
+import { useSearchParams } from "next/navigation";
+import { Notas } from "@/types/notas";
+import { useCallback } from "react";
+import Swal from "sweetalert2";
+import SingleFileUploadButton from "@/app/components/singleFileButton";
+import SendIcon from '@mui/icons-material/Send';
+import { Secretario } from "@/types/secretario";
+import { Jefatura } from "@/types/jefatura";
+
+interface GuiaContentProps {
+  sede: string;
+  secretarios: Secretario[];
+  jefaturas: Jefatura[];
+  mailProfe: string;
+}
+export interface filas{
+  rut: string;
+    Estudiante: string;
+    fecha: string;
+    nota: number | string;
+}
+function GuiaContent({ sede, secretarios, jefaturas, mailProfe }: GuiaContentProps) {
+
+  
+
+  //state para mostrar componente hijo 
+  const [showpaginaGuia, setShowpaginaGuia] = useState(false);
+  //state para sellecionar fila que se enviará al componente hijo
+  const [filaSeleccionada, setFilaSeleccionada] = useState<filas>();
+  //state para las filas de la tabla de guia
+  const [filasGuia, setFilasGuia] = useState<filas[]>([]);
+
+  //states para la descarga de datos desde el back
+  const [asignaciones, setAsignaciones] = useState<Asignacion[]>([]);
+  const [estudiantes, setEstudiantes] = useState<Estudiante[]>([]);
+  const [notas, setNotas] = useState<Notas[]>([]);
+  //Correo del profesor que ingresó
+  const searchParams = useSearchParams();
+  const mail = searchParams.get("mail");
+  
+  //importo los estudiantes, las notas, y las asignaciones
+  useEffect(() => {
+    const datos_todos = async () => {
+        try {
+            const [estRes, asigRes, notaRes] = await Promise.all([
+                axios.get(`${__url}/estudiante/todos`),
+                axios.get(`${__url}/asignaciones/todas`),
+                axios.get(`${__url}/notas/todas`),
+            ]);
+            setEstudiantes(estRes.data);
+            setAsignaciones(asigRes.data);
+            setNotas(notaRes.data);
+        } catch {}
+    };
+    datos_todos();
+}, []);
+
+  //filtro las asignaciones con el profesor que ingresó, y las cuales sean con el rol 'guia'
+  const asigsGuia = useMemo(() => {
+    return asignaciones.filter(a => a.mailProfesor === mail && a.rol === 'guia');
+  }, [asignaciones, mail]);
+
+  const secresSede = useMemo(() => {
+    return secretarios.filter(sec => sec.sede === sede);
+  }, [secretarios, sede]);
+  
+  const jefasSede = useMemo(() => {
+    return jefaturas.filter(jef => jef.sede === sede);
+  }, [jefaturas, sede]);
+  
+  const remitentes = useMemo(() => {
+    const correos: (Secretario & Jefatura)[] = [];
+
+    for(let i = 0; i < secresSede.length; i++){
+    correos.push(secresSede[i]);
+    }
+    
+    for(let i = 0; i < jefasSede.length; i++){
+      correos.push(jefasSede[i]);
+    }
+
+    return correos;
+  }, [secresSede, jefasSede]);
+  
+  //columnas guia
+  const columnsGuia: GridColDef[] = [
+    { field: 'rut', headerName: 'RUT', width: 90 },
+    { field: 'Estudiante', headerName: 'Estudiante', width: 200 },
+    { field: 'fecha', headerName: 'Fecha', width:90},
+    { field: 'nota', headerName: 'Nota', width:50},
+    { field: 'sede', headerName: 'Sede', width:90},
+    { field: 'gestionamiento', headerName: 'Gestionamiento', width:300, renderCell: (params)=> <Button onClick={() => {
+      setShowpaginaGuia(true); 
+      setFilaSeleccionada(params.row); 
+    }} 
+    >
+      Gestionar Documentos y Nota
+    </Button>},
+  
+  ];
+  
+  //filas guia
+    useEffect(() => {
+    if (!asigsGuia.length) {
+      setFilasGuia([]);
+      return;
+    }
+  
+    const nuevasFilas = asigsGuia.map(asig => ({
+    rut: estudiantes.find(est => est.mail === asig.mailEstudiante)?.rut ?? '---',
+    Estudiante: `${estudiantes.find(est => est.mail === asig.mailEstudiante)?.nombre} ${estudiantes.find(est => est.mail === asig.mailEstudiante)?.apellido} ${estudiantes.find(est => est.mail === asig.mailEstudiante)?.segundoApellido}`,
+    fecha: asig.fechaAsignacion,
+    nota: String(notas.find(not => not.mailEstudiante === asig.mailEstudiante)?.notaGuia) ?? '---',
+    sede: estudiantes.find(est => est.mail === asig.mailEstudiante)?.sede ?? '---'
+  }));
+    
+    setFilasGuia(nuevasFilas);
+  }, [asigsGuia, estudiantes, notas]);
+
+  const handleGuardarNota = useCallback(
+    (notaNueva: number) => {
+      if (!filaSeleccionada) return;
+        setFilasGuia(prev =>
+          prev.map(f =>
+            f.rut === filaSeleccionada.rut
+              ? { ...f, nota: notaNueva}
+              : f
+          )
+        );
+      
+    },
+    [filaSeleccionada]
+  );
+
+  return (
+    <Box sx={{ p: 3, width: '100%', height: 400 }}>
+      <Typography variant='h2'>Sección Guía</Typography>
+      <Typography variant='body1' sx={{ mb: 2 }}>
+        Aquí encontrarás información y recursos para guiarte.
+      </Typography>
+      {showpaginaGuia && (
+      <PageGestionamiento 
+      fila={filaSeleccionada}
+      onClose={() => setShowpaginaGuia(false)} 
+      onGuardar={handleGuardarNota}
+      estudiantes={estudiantes}
+      correos={remitentes}
+      mailProfe={mailProfe}
+      />
+      )}
+      <DataGrid
+        rows={filasGuia}
+        columns={columnsGuia}
+        pageSizeOptions={[5, 10]}
+        getRowId= {(row) => row.rut }
+        initialState={{ pagination: { paginationModel: { pageSize: 5 } } }}
+      />
+    </Box>
+  )
+}
+type PageProps ={
+  fila: filas | undefined;
+  estudiantes: Estudiante[];
+  onGuardar: (notaNueva: number) => void;
+  onClose: () => void;
+  correos: (Secretario & Jefatura)[];
+  mailProfe: string;
+}
+function PageGestionamiento({ onGuardar, onClose, fila, estudiantes, correos, mailProfe}: PageProps){
+  //state para almacenar el nombre de la tesis
+  const [tema, setTema] = useState("");
+  const [showTema, setShowTema] = useState(false);
+  const [nota, setNota] = useState("");
+  const [accion, setAccion] = useState("");
+  const [mostrarCarga, setMostrarCarga] = useState(false);
+  const [mostrarDescarga, setMostrarDescarga] = useState(false);
+  const [mostrarCambio, setMostrarCambio] = useState(false);
+  const [individualFileToUpload, setIndividualFileToUpload] = useState<File | null>(null); // State for the file chosen in the modal
+  const [tipo, setTipo] = useState("");
+  const [ruta, setRuta] = useState("");
+  const [fileInputKey1, setFileInputKey1] = useState('tesis'); // <-- Add this state
+  const [fileInputKey2, setFileInputKey2] = useState('guia'); // <-- Add this state
+  const [tesisVisible, setTesisVisible] = useState(true);
+  const [guiaVisible, setGuiaVisible] = useState(true);
+  
+  if(!fila){
+    return;
+  }
+  const estudiante = estudiantes.find(est => (est.nombre + " " + est.apellido + " " + est.segundoApellido) === fila.Estudiante) ?? null;
+  if(!estudiante){
+    return;
+  }
+  const mailEstudiante = estudiante?.mail;
+  
+ 
+  const guardar = async (nota: string) => {
+  try {
+    const valor = Number(nota);
+    await axios.patch(`${__url}/notas/actualizar`, {
+      mailEstudiante,
+      tipoNota: "notaGuia",
+      valor
+    });
+    onGuardar(valor);
+
+  } catch {
+    
+    alert("Error al guardar la nota");
+  }
+  };
+  const handleIndividualFileSelect = (file: File | null) => {
+        setIndividualFileToUpload(file);
+        
+    };
+  const cargando = () => {
+    Swal.fire({
+      title: "Cargando . . .",
+      text: "Espere por favor",
+      html: '<i class="fas fa-spinner fa-spin" style="font-size: 24px;"></i>',
+      allowOutsideClick: false,
+      showConfirmButton: false,
+    });
+  };
+  const subir_descargar_Documento = async (accion: string, tipo: string, ruta?: string) => {
+    if(accion === 'cargar'){
+
+      if(!individualFileToUpload){
+        return;
+      }
+      if (!mailEstudiante) {
+      Swal.fire("Error", "No se pudo obtener el correo del usuario", "error");
+      return;
+      }
+      cargando();
+      const formData = new FormData();
+      formData.append("mail", mailEstudiante);
+      formData.append("file", individualFileToUpload);
+      try{
+        
+        await axios.post(`${__url}/${tipo}/${ruta}`, formData, {
+          withCredentials: true
+        });
+        const data = {
+                nombre: estudiante?.nombre,
+                segundoNombre: estudiante?.segundoNombre,
+                apellido: estudiante?.apellido,
+                segundoApellido: estudiante?.segundoApellido,
+                mail: estudiante?.mail,
+                rut: estudiante?.rut,
+                tema_Tesis: tema
+            };
+        
+            await axios.patch(`${__url}/estudiante/actualizar/${estudiante.mail}`, data);
+        Swal.fire(
+          "Subida exitosa",
+          `Su ${tipo} ha sido subida correctamente`,
+          "success"
+        );
+        const profe= await axios.get(`${__url}/profesor/${mailProfe}`);
+        
+        for(let i = 0; i < correos.length; i++){
+          await axios.post(`${__url}/mail/enviar`, {
+                    toMail: `${correos[i].mail}`,
+                    subject: `Documento subido`,
+                    text: `El académico ${profe.data.nombre} ${profe.data.apellido} ${profe.data.segundoApellido}, subió una Rúbrica para guía`
+          });
+        }
+        
+      }catch{
+        Swal.fire(
+          "Error",
+          "Hubo un error al subir el archivo, pruebe nuevamente más tarde.",
+          "error"
+        );
+      }
+    }else if(accion === 'descargar'){
+      const partMail = mailEstudiante.replace(/[^a-zA-Z0-9]/g, '_');
+      try{
+        let response
+        if(tipo === 'tesis'){
+        response = await axios.get(`${__url}/${tipo}/${mailEstudiante}`,
+          {responseType:'blob'}
+        );
+        }else if(tipo === 'guia'){
+          response = await axios.get(`${__url}/${tipo}/${ruta}`,
+            {responseType:'blob'}
+          );
+        }
+        if(!response){
+          return;
+        }
+        const blob = new Blob([response.data], { type: response.data.type });             
+        const url = window.URL.createObjectURL(blob);
+                
+        // Detectar extensión según tipo MIME
+        let extension = "";
+        if (blob.type === "application/pdf") {
+            extension = "pdf";
+        } else if (
+            blob.type ===
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        ) {
+            extension = "docx";
+        } else {
+            extension = "bin"; // fallback genérico
+        }
+    
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = `${partMail}-Tesis.${extension}`; // nombre dinámico según tipo
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+    
+        window.URL.revokeObjectURL(url); // buena práctica
+    
+        Swal.fire("Descargado", "Archivo descargado correctamente", "success");
+      } catch{
+        Swal.fire(
+          "ERROR",
+          "El archivo no se ha subido a la base de datos",
+          "error"
+        );
+      }
+    }
+  };
+
+  return(
+    <Box sx={{
+      backgroundColor:'white', 
+      position:'absolute', 
+      zIndex: 1000, 
+      top:"100px",
+      left:"800px",
+      height:"400px",
+      width:"550px",
+      borderColor:'black',
+      border:1,
+      borderRadius:'20px'
+    }}>
+      <Typography variant='h5' sx={{ mb: 2, textAlign: 'center' }}>
+          Indique la acción que quiere realizar
+      </Typography>
+      <Box 
+      sx={{
+        display:'flex',
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center'
+      }}
+      >
+        <Button
+        onClick={() => {
+          setAccion("descargar");
+          setMostrarCarga(false);
+          setMostrarCambio(false);
+          setMostrarDescarga(true)
+        }}
+        >
+          Descargar Archivo 
+        </Button>
+        <Button
+        onClick={() => {
+          setAccion("cargar");
+          setMostrarCarga(true);
+          setMostrarCambio(false);
+          setMostrarDescarga(false);
+        }}
+        >
+          Cargar Archivo
+        </Button>
+        <Button
+        onClick={() => {
+          setMostrarCambio(true);
+          setMostrarCarga(false);
+          setMostrarDescarga(false);
+        }}
+        >
+          Cambiar Nota
+        </Button>
+      </Box>
+      
+      {mostrarCarga && (
+        <Box
+        sx={{
+          display:'flex',
+          flexDirection:'column',
+          position:'relative',
+          top:'20px',
+          gap:2
+        }}
+        
+        >
+          <Typography variant='h6' sx={{ mb: 2, textAlign: 'center' }}>
+            Indique el tipo de archivo que quiere cargar
+          </Typography>
+          <Box
+          sx={{
+          display:'flex',
+          flexDirection:'row',
+          justifyContent:'center',
+          alignItems:'center',
+          gap:3
+          }}
+          >
+            {guiaVisible && (
+              <SingleFileUploadButton
+                key={fileInputKey2}
+                onFileSelect={(file) => {
+                  handleIndividualFileSelect(file); 
+                  setTipo('guia');
+                  setRuta('rubrica_guia');
+                  setFileInputKey2("");
+                  setTesisVisible(false)
+                }}
+                onReset={() => {
+                  setFileInputKey2('guia');
+                  setTesisVisible(true);
+                }}
+                disabled={fileInputKey1===""}
+                buttonText={individualFileToUpload ? `Cambiar Archivo: ${individualFileToUpload.name}` : "Rúbrica"}
+                acceptedFileTypes=".pdf, .doc, .docx, .xlsx, .xls"
+              />
+            )}
+            
+            {tesisVisible && (
+              <SingleFileUploadButton
+                key={fileInputKey1}
+                disabled={fileInputKey2===""}
+                onFileSelect={(file) => {
+                  handleIndividualFileSelect(file); 
+                  setTipo('tesis');
+                  setRuta('Tesis');
+                  setFileInputKey1("");
+                  setGuiaVisible(false);
+                  setShowTema(true);
+                }}
+                onReset={() => {
+                  setFileInputKey1('tesis');
+                  setGuiaVisible(true)
+                }}
+                buttonText={individualFileToUpload ? `Cambiar Archivo: ${individualFileToUpload.name}` : "Tesis"}
+                acceptedFileTypes=".pdf, .doc, .docx, .xlsx, .xls"
+              />
+            )}
+            
+          </Box>
+          <Box
+          sx={{
+            display:'flex',
+            justifyContent:'center',
+            alignItems:'center'
+          }}
+          >
+            {showTema && (
+              <TextField
+              label="Nombre Tesis"
+              value={tema}
+              onChange={(e) => setTema(e.target.value)}
+              sx={{ width: '400px'}}
+              />
+            )} 
+          </Box>
+          <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3, gap: 2 }}>
+              <Button 
+              variant="outlined" 
+              onClick={onClose} 
+              sx={{width:'250px'}}
+              >
+                  Cerrar
+              </Button>
+              <Button
+                  variant="contained"
+                  startIcon={<SendIcon />}
+                  onClick={() => subir_descargar_Documento(accion, tipo, ruta)}
+                  disabled={(tipo === 'tesis' && (!individualFileToUpload || !tema)) || 
+                            (tipo === 'guia' && !individualFileToUpload)
+                  } // Disable if type or file not selected
+                  sx={{width:'250px'}}
+              >
+                  Subir
+              </Button>
+          </Box>
+        </Box>
+      )}
+      {mostrarCambio && (
+        <Box
+        position='relative'
+        top='50px'
+        >
+          <Box
+          sx={{
+            display:'flex',
+            justifyContent:'center',
+            flexDirection:'column',
+            alignItems:'center'
+          }}
+          >
+            <Typography variant='h6' sx={{ mb: 2, textAlign: 'center' }}>
+                Nota Guía
+            </Typography>
+            <TextField
+              label="Ejemplo: 6.5" 
+              value={nota}
+              onChange={(e) => setNota(e.target.value)}
+              sx={{ width: '120px', height: '50px' }}
+            />
+            <p>Ingrese un valor entre 1 y 7. <br/> 
+                (Con un solo decimal).
+            </p>
+            <Box sx={{
+              display:'flex',
+              flexDirection:'row'}}>
+                <Stack spacing='30px' direction='row'>
+                  <Button 
+                  onClick={() => guardar(nota)} 
+                  sx={{ 
+                    color:'white', 
+                    background:'blue'}}
+                  >
+                    GUARDAR
+                  </Button>
+                  <Button 
+                  onClick={() => {onClose();}} 
+                  sx={{ 
+                    color:'white', 
+                    background:'red'}}
+                  >
+                    CERRAR
+                  </Button>
+                </Stack>
+              
+            </Box>
+          </Box>
+        </Box>
+      )}
+      {mostrarDescarga && (
+        <Box
+        position='relative'
+        top='60px'
+        >
+          <Typography variant='h6' sx={{ mb: 2, textAlign: 'center' }}>
+            Indique el tipo de archivo que quiere descargar
+          </Typography>
+          <Box
+          sx={{
+          display:'flex',
+          flexDirection:'row',
+          justifyContent:'center',
+          alignItems:'center',
+          gap:3
+          }}
+          >
+            <Button
+                startIcon={<SendIcon />}
+                onClick={() => {
+                  setTipo('guia');
+                  setRuta(`archivos_guia/Rubrica_Guia.docx`);
+                  subir_descargar_Documento(accion, tipo, ruta)
+                }}
+                sx={{backgroundColor:'#003C58', color:'white'}}
+            >
+                Rúbrica
+            </Button>
+            <Button
+                startIcon={<SendIcon />}
+                onClick={() => {
+                  setTipo('tesis');
+                  subir_descargar_Documento(accion, tipo)
+                }}
+                sx={{
+                  backgroundColor:'#003C58', 
+                  color:'white'}}
+            >
+                Tesis
+            </Button>
+            <Button 
+            onClick={() => {onClose();}} 
+            sx={{ 
+            position:'absolute',
+            top:'200px',
+            left:'450px',
+            color:'white', 
+            background:'red'}}
+            >
+              CERRAR
+            </Button>
+          </Box>
+        </Box>
+      )}
+    </Box>
+  );
+}
+export default GuiaContent

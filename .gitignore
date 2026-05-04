@@ -1,0 +1,54 @@
+# Dependencias
+
+node_modules/
+
+# Builds / compilación
+
+dist/
+build/
+out/
+
+# Archivos de entorno (MUY importante no subirlos)
+
+.env
+.env.*
+!.env.example
+
+# Logs
+
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sistema operativo
+
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+
+tmp/
+temp/
+
+# IDEs / editores
+
+.vscode/
+.idea/
+*.swp
+
+# Docker (opcional, según tu caso)
+
+docker-compose.override.yml
+
+# Archivos de base de datos locales
+
+*.sql
+*.sqlite
+*.db
+
+# Archivos de cache
+
+.cache/
+.npm/
