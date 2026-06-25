@@ -1,0 +1,20 @@
+export interface Estudiante{
+    mail: string;
+    nombre: string;
+    segundoNombre: string;
+    apellido: string;
+    segundoApellido: string;
+    rut: string;
+    codigo: string;
+    agnoIngreso: number;
+    agnoEgreso: number;
+    nroResolucion: string;
+    hora: string;
+    fechaExamen: string;
+    sede: string;
+    addedAt: string
+    mailPersonal: string;
+    celular: string;
+    semestre: string;
+    tema_Tesis: string;
+}
