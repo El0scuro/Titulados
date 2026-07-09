@@ -1,0 +1,80 @@
+/* [project]/src/app/swis721bt_11e1544e.module.css [app-client] (css) */
+@font-face {
+  font-family: Swis721BT;
+  src: url("../media/Swis721BT-s.p.93da073a.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Swis721BT;
+  src: url("../media/Swis721BT italic-s.p.6395a48d.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Swis721BT;
+  src: url("../media/Swis721BT bold-s.p.6a404612.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Swis721BT;
+  src: url("../media/Swis721BT bold italic-s.p.27d1fe21.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Swis721BT;
+  src: url("../media/Swis721BT CN-s.p.fc1e6af1.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Swis721BT;
+  src: url("../media/Swis721BT CN bold-s.p.f0d56f21.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Swis721BT;
+  src: url("../media/Swis721BT CN bold italic-s.p.5a3d7a32.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Swis721BT;
+  src: url("../media/Swis721BT CN italic-s.p.802a6740.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Swis721BT Fallback;
+  src: local(Arial);
+  ascent-override: 112.46%;
+  descent-override: 27.54%;
+  line-gap-override: 0.0%;
+  size-adjust: 85.62%;
+}
+
+.swis721bt_11e1544e-module__HIkGgW__className {
+  font-family: Swis721BT, Swis721BT Fallback;
+}
+
+/* [project]/src/app/globals.css [app-client] (css) */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+/*# sourceMappingURL=src_app_fd437056._.css.map*/

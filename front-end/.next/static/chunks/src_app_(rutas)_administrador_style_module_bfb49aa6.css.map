@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///D:/Titulados/front-end/src/app/%28rutas%29/administrador/style.module.css"],"sourcesContent":[".p{\r\n    margin: 0;\r\n    line-height: 1.2;\r\n    white-space: 'nowrap';\r\n}"],"names":[],"mappings":"AAAA","debugId":null}}]
+}

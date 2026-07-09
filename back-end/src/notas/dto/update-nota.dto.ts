@@ -1,4 +1,4 @@
-import { IsEnum, IsNumber, IsString, Min, Max } from 'class-validator';
+import { IsEnum, IsNumber, IsString, Min, Max, IsOptional } from 'class-validator';
 
 export enum TipoNota {
   GUIA = 'notaGuia',
@@ -14,6 +14,7 @@ export class UpdateNotaDto {
   @IsEnum(TipoNota)
   tipoNota: TipoNota;
 
+  @IsOptional()
   @IsNumber()
   @Min(1)
   @Max(7)

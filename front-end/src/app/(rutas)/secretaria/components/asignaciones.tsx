@@ -389,9 +389,22 @@ function Asignaciones() {
         } catch {}
     };
 
-    //borrar fila por rut
-    const eliminarFila = async (rut: string) => {
-    await axios.delete(`${__url}/asignaciones/borrar/${rut}`);
+    //borrar fila por id
+    const eliminarFila = async (id: string) => {
+        const asignacion = asignaciones.find(asig => asig.id === id);
+        await axios.delete(`${__url}/asignaciones/borrar/${id}`);
+        let tipoNota;
+        if(asignacion?.rol === 'guia'){
+            tipoNota = 'notaGuia';
+        }else if(asignacion?.rol === 'informante'){
+            tipoNota = 'notaInformante';
+        }else if(asignacion?.rol === 'presidente'){
+            tipoNota = 'notaPresidente';
+        }
+        await axios.patch(`${__url}/notas/borrar/null`, {
+            mailEstudiante: asignacion?.mailEstudiante,
+            tipoNota
+        });
     setFinished(true); // fuerza recarga desde el backend
     };
 

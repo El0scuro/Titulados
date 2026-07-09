@@ -50,7 +50,18 @@ export class NotasService {
   return this.notaRepo.save(nota);
 }
 
+async notaNull(dto: UpdateNotaDto){
+  const {mailEstudiante, tipoNota} = dto;
+  const nota = await this.notaRepo.findOne({
+    where: {mailEstudiante},
+  });
+  if(!nota){
+    throw new NotFoundException('Notas no encontradas para el estudiante');
+  }
 
+  nota[tipoNota] = null;
+  return this.notaRepo.save(nota);
+}
 async remove(mail: string) {
   return this.notaRepo.delete({
     mailEstudiante: mail

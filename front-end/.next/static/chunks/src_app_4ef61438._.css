@@ -1,0 +1,225 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap";
+/* [project]/src/app/components/botones_login/style_boton.module.css [app-client] (css) */
+.style_boton-module__OvOhEG__boton {
+  text-align: center;
+  cursor: pointer;
+  font-feature-settings: "liga" 1, "calt" 1;
+  background-color: #003c58;
+  border-radius: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 300px;
+  font-family: Inter, sans-serif;
+  text-decoration: none;
+  transition: transform .3s ease-out, box-shadow .3s ease-out;
+  display: flex;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+}
+
+@media (max-width: 480px) {
+  .style_boton-module__OvOhEG__boton {
+    width: 150px;
+    height: 200px;
+  }
+}
+
+.style_boton-module__OvOhEG__color {
+  color: #fff;
+}
+
+.style_boton-module__OvOhEG__boton:hover {
+  transform: scale(1.05)translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, .2);
+}
+
+.style_boton-module__OvOhEG__boton:visited {
+  color: inherit;
+}
+
+/* [project]/src/app/(rutas)/login/estilos.module.css [app-client] (css) */
+.estilos-module__Vu4m5W__contenedor_page {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  height: 100vh;
+  animation: 55s infinite estilos-module__Vu4m5W__cambio_Foto;
+  display: flex;
+  overflow: auto;
+}
+
+.estilos-module__Vu4m5W__header {
+  text-align: center;
+  background-color: #003c58;
+  border-radius: 16px;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  display: flex;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .1);
+}
+
+.estilos-module__Vu4m5W__titulo {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.estilos-module__Vu4m5W__subtitulo {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 50;
+}
+
+.estilos-module__Vu4m5W__contenedor_botones {
+  flex-flow: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+}
+
+.estilos-module__Vu4m5W__contenedor_info {
+  text-align: center;
+  background-color: #003c58;
+  border-radius: 20px;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  width: 800px;
+  height: 200px;
+  display: flex;
+}
+
+.estilos-module__Vu4m5W__div_left {
+  justify-content: center;
+  display: flex;
+}
+
+.estilos-module__Vu4m5W__info {
+  color: #fff;
+  width: 600px;
+  height: auto;
+  box-shadow: none;
+  text-align: left;
+  font-feature-settings: "liga" 1, "calt" 1;
+  font-family: Inter, sans-serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+}
+
+.estilos-module__Vu4m5W__div_right {
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  margin-left: 20px;
+  display: flex;
+}
+
+.estilos-module__Vu4m5W__redes {
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 20px;
+  display: flex;
+}
+
+.estilos-module__Vu4m5W__foto1, .estilos-module__Vu4m5W__foto2 {
+  width: 150px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .estilos-module__Vu4m5W__contenedor_botones {
+    align-items: center;
+  }
+
+  .estilos-module__Vu4m5W__titulo {
+    font-size: 20px;
+  }
+
+  .estilos-module__Vu4m5W__subtitulo {
+    font-size: 10px;
+  }
+
+  .estilos-module__Vu4m5W__contenedor_info {
+    width: 400px;
+    height: 1000px;
+  }
+
+  .estilos-module__Vu4m5W__redes {
+    margin-left: 0;
+  }
+
+  .estilos-module__Vu4m5W__info {
+    width: 300px;
+    font-size: 12px;
+  }
+
+  .estilos-module__Vu4m5W__foto1, .estilos-module__Vu4m5W__foto2 {
+    width: 50px;
+  }
+}
+
+.estilos-module__Vu4m5W__background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  animation: 55s infinite estilos-module__Vu4m5W__cambio_Foto;
+  overflow: hidden;
+}
+
+@keyframes estilos-module__Vu4m5W__cambio_Foto {
+  0%, 9% {
+    background-image: url("../media/Arquitectura.f19dba7e.jpeg");
+  }
+
+  9.1%, 18.1% {
+    background-image: url("../media/Ciencias del Mar y de Recursos Naturales.b3cdeb02.webp");
+  }
+
+  18.2%, 27.2% {
+    background-image: url("../media/Ciencias Económicas y Administrativas.f5c594dd.webp");
+  }
+
+  27.3%, 36.3% {
+    background-image: url("../media/Ciencias Sociales.93a8bffe.webp");
+  }
+
+  36.4%, 45.4% {
+    background-image: url("../media/Ciencias.d26d6c3a.jpg");
+  }
+
+  45.5%, 54.5% {
+    background-image: url("../media/Derecho.971594af.jpeg");
+  }
+
+  54.6%, 63.6% {
+    background-image: url("../media/Farmacia.a6306266.webp");
+  }
+
+  63.7%, 72.7% {
+    background-image: url("../media/Humanidades y Educación.8f71e968.webp");
+  }
+
+  72.8%, 81.8% {
+    background-image: url("../media/Ingeniería.741e73d3.webp");
+  }
+
+  81.9%, 90.9% {
+    background-image: url("../media/Medicina.5caa1913.webp");
+  }
+
+  91%, 100% {
+    background-image: url("../media/Odontología.bed61d2a.webp");
+  }
+}
+
+/*# sourceMappingURL=src_app_4ef61438._.css.map*/

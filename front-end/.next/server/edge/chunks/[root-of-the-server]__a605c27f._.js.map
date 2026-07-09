@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/ (unsupported edge import 'crypto')"],"sourcesContent":["__turbopack_context__.n(__import_unsupported(`crypto`));\n"],"names":[],"mappings":"AAAA,sBAAsB,CAAC,CAAC,qBAAqB,CAAC,MAAM,CAAC"}},
+    {"offset": {"line": 20, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/lib/auth0.ts"],"sourcesContent":["import { Auth0Client } from \"@auth0/nextjs-auth0/server\"\r\n\r\nexport const auth0 = new Auth0Client({\r\n    authorizationParameters:{\r\n        scope: process.env.AUTH0_SCOPE,\r\n        audience: process.env.AUTH0_AUDIENCE\r\n    }\r\n})\r\n"],"names":[],"mappings":";;;;AAAA;AAAA;;AAEO,MAAM,QAAQ,IAAI,0SAAW,CAAC;IACjC,yBAAwB;QACpB,OAAO,QAAQ,GAAG,CAAC,WAAW;QAC9B,UAAU,QAAQ,GAAG,CAAC,cAAc;IACxC;AACJ"}},
+    {"offset": {"line": 37, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/middleware.ts"],"sourcesContent":["import type { NextRequest } from \"next/server\"\r\n\r\nimport { auth0 } from \"./lib/auth0\"\r\n\r\nexport async function middleware(request: NextRequest) {\r\n  return await auth0.middleware(request)\r\n}\r\n\r\nexport const config = {\r\n  matcher: [\r\n    /*\r\n     * Match all request paths except for the ones starting with:\r\n     * - _next/static (static files)\r\n     * - _next/image (image optimization files)\r\n     * - favicon.ico, sitemap.xml, robots.txt (metadata files)\r\n     */\r\n    \"/((?!_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)\",\r\n  ],\r\n}"],"names":[],"mappings":";;;;;;AAEA;;AAEO,eAAe,WAAW,OAAoB;IACnD,OAAO,MAAM,oIAAK,CAAC,UAAU,CAAC;AAChC;AAEO,MAAM,SAAS;IACpB,SAAS;QACP;;;;;KAKC,GACD;KACD;AACH"}}]
+}

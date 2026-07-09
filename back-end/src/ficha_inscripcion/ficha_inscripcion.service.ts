@@ -36,7 +36,6 @@ export class ArchivosService {
     if(!fichas){
       return null;
     }
-    console.log(fichas);
     return fichas;
   }
   
