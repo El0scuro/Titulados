@@ -21,9 +21,9 @@ services:
 
   backend:
     build:
-      context: ./titulados-api-v2-test
+      context: ./back-end
     env_file:
-      - ./titulados-api-v2-test/.env
+      - ./back-end/.env
     ports:
       - "4300:4300"
     depends_on:
@@ -31,12 +31,12 @@ services:
     networks:
       - app-network
     volumes:
-      - ./titulados-api-v2-test/src/archivos:/app/src/archivos
+      - ./back-end/src/archivos:/app/src/archivos
   frontend:
     build:
-      context: ./titulados-pruebas-locales
+      context: ./front-end
     env_file:
-      - ./titulados-pruebas-locales/.env
+      - ./front-end/.env
     ports:
       - "3000:3000"
     depends_on:

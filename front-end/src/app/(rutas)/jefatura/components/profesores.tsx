@@ -8,7 +8,6 @@ import SendIcon from '@mui/icons-material/Send';
 import axios from 'axios';
 import __url from '@/lib/const';
 import { Profesor } from '@/types/profesor';
-import { Asignacion } from '@/types/asignacion';
 
 
 interface NewProfessorState {
@@ -29,7 +28,6 @@ export default function Profesores(){
 
     const [viewValue, setViewValue] = useState<'ver' | 'crear'>('ver');
     const [profesores, setProfesores] = useState<Profesor[]>([]);
-    const [asignaciones, setAsignaciones] = useState<Asignacion[]>([]);
     const [finished, setFinished] = useState(true);
     const [filaSeleccionada, setFilaSeleccionada] = useState<filas>();
     const [showPageActualizar, setShowActualizarPage] = useState(false);
@@ -323,7 +321,6 @@ export default function Profesores(){
                 {showPageActualizar && (
                     <ActualizarPage
                     fila={filaSeleccionada}
-                    profesores={profesores}
                     action={() => setShowActualizarPage(false)}
                     ActionAction={()=> setFinished(prev => !prev)}
                     />
@@ -343,12 +340,11 @@ interface newProfesor {
 }
 type PageProps = {
    fila: filas | undefined;
-   profesores: Profesor[];
    action: () => void;
    ActionAction: () => void; 
 }
 
-function ActualizarPage({action: onClose, fila, profesores, ActionAction: ActionAction}: PageProps){
+function ActualizarPage({action: onClose, fila, ActionAction: ActionAction}: PageProps){
     const [actualizado, setActualizado] = useState<newProfesor>({
         nombre: '',
         segundoNombre: '',

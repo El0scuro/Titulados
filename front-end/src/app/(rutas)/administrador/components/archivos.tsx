@@ -1317,8 +1317,8 @@ export function DeletePage({action: onClose, fila, estudiantes, ActionAction: Ac
                 <Button
                 sx={{color:'red'}}
                 onClick={() => {
-                    borrarEstudiante;
-                    onClose;
+                    borrarEstudiante();
+                    onClose();
                 }}
                 >
                     Si, borrar
