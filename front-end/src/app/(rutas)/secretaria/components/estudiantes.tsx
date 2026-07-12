@@ -986,7 +986,6 @@ export function ExamenPage({action: onClose, fila, estudiantes, ActionAction: Ac
         return;
     }
     
-    const rutEstu = estudiantes.find(est => (est.nombre + " " + est.segundoNombre + " " + est.apellido + " " + est.segundoApellido) === fila.studentName)?.rut;
     const estudiante = estudiantes.find(est => (est.nombre + " " + est.segundoNombre + " " + est.apellido + " " + est.segundoApellido) === fila.studentName);
     if(!estudiante){
         return;

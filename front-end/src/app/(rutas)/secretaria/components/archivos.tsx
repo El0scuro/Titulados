@@ -354,7 +354,7 @@ function Archivos() {
                     title: `Archivo subido correctamente: ${individualFileToUpload.name}`
                 })
 
-            } catch (error) {
+            } catch {
                 Swal.fire({
                     icon: 'error',
                     title: 'Error al subir el archivo',
@@ -1357,8 +1357,8 @@ export function DeletePage({action: onClose, fila, estudiantes, ActionAction: Ac
                 <Button
                 sx={{color:'red'}}
                 onClick={() => {
-                    borrarEstudiante;
-                    onClose;
+                    borrarEstudiante();
+                    onClose();
                 }}
                 >
                     Si, borrar

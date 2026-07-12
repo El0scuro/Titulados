@@ -349,7 +349,6 @@ export default function Profesores(){
                 {showPageActualizar && (
                     <ActualizarPage
                     fila={filaSeleccionada}
-                    profesores={profesores}
                     action={() => setShowActualizarPage(false)}
                     ActionAction={()=> setFinished(prev => !prev)}
                     />
@@ -369,12 +368,11 @@ interface newProfesor {
 }
 type PageProps = {
    fila: filas | undefined;
-   profesores: Profesor[];
    action: () => void;
    ActionAction: () => void; 
 }
 
-function ActualizarPage({action: onClose, fila, profesores, ActionAction: ActionAction}: PageProps){
+function ActualizarPage({action: onClose, fila, ActionAction: ActionAction}: PageProps){
     const [actualizado, setActualizado] = useState<newProfesor>({
         nombre: '',
         segundoNombre: '',
