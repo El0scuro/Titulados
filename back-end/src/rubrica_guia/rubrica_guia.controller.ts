@@ -54,36 +54,34 @@ constructor(private readonly archivosService: ArchivosService){}
           'src/archivos/archivos_guia'
           );
           const archivos = fs.readdirSync(carpeta);
-          let encontrado = false;
 
           for (let i = 0; i < archivos.length; i++) {
             const sin_punto = archivos[i].split(".")[0];
+            if(archivos[i] != "Rubrica_Guia.docx"){
+              if (
+                req.nombreFinal === archivos[i] ||
+                (fileName.length > archivos[i].length && fileName.includes(sin_punto))
 
-            if (
-              fileName === archivos[i] ||
-              (fileName.length > archivos[i].length && fileName.includes(sin_punto))
-            ) {
-              const nombre = archivos[i];
+              ) {
+                const nombre = archivos[i];
 
-              const ruta = path.join(
-                process.cwd(),
-                'src/archivos/archivos_guia',
-                nombre
-              );
+                const ruta = path.join(
+                  process.cwd(),
+                  'src/archivos/archivos_guia',
+                  nombre
+                );
 
-              await fs.promises.unlink(ruta);
+                await fs.promises.unlink(ruta);
 
-              req.rep = 1;
-              fileName = nombre;
-              encontrado = true;
-              break;
+                req.rep = 1;
+                fileName = nombre;
+                break;
+              }
             }
+            
           }
 
           cb(null, fileName);
-          if(req.rep === 0){
-            cb(null, fileName);
-          }
           
         },
       }),
@@ -95,6 +93,7 @@ constructor(private readonly archivosService: ArchivosService){}
     @Req() req: any
   ) {
     console.log("Archivo recibido:", file);
+    console.log(req.nombreFinal)
     if(req.rep === 1){
       await this.archivosService.borrarRegistro(req.nombreFinal);
     }

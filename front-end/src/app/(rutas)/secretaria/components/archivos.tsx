@@ -67,6 +67,8 @@ function Archivos() {
 
     const [fileInputKey] = useState(0); // <-- Add this state
 
+    const [nombreTesis, setNombreTesis] = useState<string>('');
+
     useEffect(() => {
         if(!finished){
             return;
@@ -317,6 +319,21 @@ function Archivos() {
                     axios.post(`${__url}/${selectedFileType}/Tesis`, formData, {
                         withCredentials: true,
                     });
+                    const estudiante = estudiantes.find(est => est.mail === selectedStudentIdForUpload);
+                    if(!estudiante){
+                        return;
+                    }
+                    const data = {
+                        nombre: estudiante?.nombre,
+                        segundoNombre: estudiante?.segundoNombre,
+                        apellido: estudiante?.apellido,
+                        segundoApellido: estudiante?.segundoApellido,
+                        mail: estudiante?.mail,
+                        rut: estudiante?.rut,
+                        tema_Tesis: nombreTesis
+                    };
+                    axios.patch(`${__url}/estudiante/actualizar/${estudiante.mail}`, data);
+                    setNombreTesis('');
                     break;
                 case "guia":
                     axios.post(`${__url}/${selectedFileType}/rubrica_guia`, formData, {
@@ -849,7 +866,23 @@ function Archivos() {
                             <MenuItem value="informante">Rubrica Informante</MenuItem>
                         </Select>
                     </FormControl>
-
+                    {selectedFileType === 'tesis' && (
+                        <Box
+                        sx={{
+                            display:'flex',
+                            justifyContent:'center'
+                        }}
+                        >
+                            <TextField
+                            sx={{ width:'300px'}}
+                            label='Nombre de la Tesis'
+                            value={nombreTesis}
+                            onChange={(e) => setNombreTesis(
+                                e.target.value
+                            )}
+                            />
+                        </Box>
+                    )}
                     <SingleFileUploadButton
                         key={fileInputKey}
                         onFileSelect={handleIndividualFileSelect}
@@ -871,7 +904,7 @@ function Archivos() {
                             variant="contained"
                             startIcon={<SendIcon />}
                             onClick={handleUploadIndividualFile}
-                            disabled={!selectedFileType || !individualFileToUpload} // Disable if type or file not selected
+                            disabled={!selectedFileType || !individualFileToUpload || !nombreTesis} // Disable if type or file not selected
                             sx={{ flexGrow: 1 }}
                         >
                             Subir

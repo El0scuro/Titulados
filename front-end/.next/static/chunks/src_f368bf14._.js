@@ -303,6 +303,7 @@ function Archivos() {
     const [individualFileToUpload, setIndividualFileToUpload] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null); // State for the file chosen in the modal
     const [fileInputKey] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0); // <-- Add this state
     const [finished, setFinished] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+    const [nombreTesis, setNombreTesis] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Archivos.useEffect": ()=>{
             if (!finished) {
@@ -408,7 +409,7 @@ function Archivos() {
                 }
             }, void 0, false, {
                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                lineNumber: 175,
+                lineNumber: 177,
                 columnNumber: 20
             }, this);
         } else {
@@ -418,7 +419,7 @@ function Archivos() {
                 }
             }, void 0, false, {
                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                lineNumber: 178,
+                lineNumber: 180,
                 columnNumber: 20
             }, this);
         }
@@ -482,7 +483,7 @@ function Archivos() {
                     children: ficha_subida(params.row.nombre + " " + params.row.segundoNombre + " " + params.row.apellido + " " + params.row.segundoApellido)
                 }, void 0, false, {
                     fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                    lineNumber: 192,
+                    lineNumber: 194,
                     columnNumber: 25
                 }, this);
             }
@@ -512,7 +513,7 @@ function Archivos() {
                             children: "Subir Documento"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                            lineNumber: 211,
+                            lineNumber: 213,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
@@ -527,7 +528,7 @@ function Archivos() {
                             children: "Bajar Documento"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                            lineNumber: 223,
+                            lineNumber: 225,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
@@ -545,7 +546,7 @@ function Archivos() {
                             children: "Actualizar datos"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                            lineNumber: 234,
+                            lineNumber: 236,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
@@ -562,13 +563,13 @@ function Archivos() {
                             children: "ELIMINAR ESTUDIANTE"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                            lineNumber: 248,
+                            lineNumber: 250,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                    lineNumber: 203,
+                    lineNumber: 205,
                     columnNumber: 17
                 }, this)
         }
@@ -626,6 +627,20 @@ function Archivos() {
                         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$axios$40$1$2e$18$2e$0$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$const$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], "/").concat(selectedFileType, "/Tesis"), formData, {
                             withCredentials: true
                         });
+                        const estudiante = estudiantes.find((est)=>est.mail === selectedStudentIdForUpload);
+                        if (!estudiante) {
+                            return;
+                        }
+                        const data = {
+                            nombre: estudiante === null || estudiante === void 0 ? void 0 : estudiante.nombre,
+                            segundoNombre: estudiante === null || estudiante === void 0 ? void 0 : estudiante.segundoNombre,
+                            apellido: estudiante === null || estudiante === void 0 ? void 0 : estudiante.apellido,
+                            segundoApellido: estudiante === null || estudiante === void 0 ? void 0 : estudiante.segundoApellido,
+                            mail: estudiante === null || estudiante === void 0 ? void 0 : estudiante.mail,
+                            rut: estudiante === null || estudiante === void 0 ? void 0 : estudiante.rut,
+                            tema_Tesis: nombreTesis
+                        };
+                        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$axios$40$1$2e$18$2e$0$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].patch("".concat(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$const$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], "/estudiante/actualizar/").concat(estudiante.mail), data);
                         break;
                     case "guia":
                         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$axios$40$1$2e$18$2e$0$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post("".concat(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$const$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], "/").concat(selectedFileType, "/rubrica_guia"), formData, {
@@ -939,7 +954,7 @@ function Archivos() {
                         children: "Carga de estudiantes vía archivo Excel"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                        lineNumber: 666,
+                        lineNumber: 682,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
@@ -947,7 +962,7 @@ function Archivos() {
                         component: "span",
                         startIcon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$downloadIcon$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                            lineNumber: 672,
+                            lineNumber: 688,
                             columnNumber: 32
                         }, void 0),
                         onClick: handleFileDownload,
@@ -966,7 +981,7 @@ function Archivos() {
                         children: "Descargar plantilla para estudiantes"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                        lineNumber: 669,
+                        lineNumber: 685,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$singleFileButton$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -975,7 +990,7 @@ function Archivos() {
                         acceptedFileTypes: ".xlsx, .xls"
                     }, fileInputKey, false, {
                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                        lineNumber: 689,
+                        lineNumber: 705,
                         columnNumber: 17
                     }, this),
                     archivoExcel && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Box$2f$Box$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Box$3e$__["Box"], {
@@ -998,13 +1013,13 @@ function Archivos() {
                                         children: archivoExcel.name
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                        lineNumber: 699,
+                                        lineNumber: 715,
                                         columnNumber: 56
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                lineNumber: 698,
+                                lineNumber: 714,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
@@ -1012,7 +1027,7 @@ function Archivos() {
                                 color: "success",
                                 startIcon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$icons$2d$material$40$7$2e$3$2e$11_$5f$138bb24b816733e1ac507df1068f8b35$2f$node_modules$2f40$mui$2f$icons$2d$material$2f$esm$2f$Send$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                     fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                    lineNumber: 704,
+                                    lineNumber: 720,
                                     columnNumber: 40
                                 }, void 0),
                                 onClick: ()=>handleExcel(archivoExcel),
@@ -1029,19 +1044,19 @@ function Archivos() {
                                 children: "Subir Archivo"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                lineNumber: 701,
+                                lineNumber: 717,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                        lineNumber: 697,
+                        lineNumber: 713,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                lineNumber: 665,
+                lineNumber: 681,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Card$2f$Card$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Card$3e$__["Card"], {
@@ -1064,7 +1079,7 @@ function Archivos() {
                         children: "Generar reporte"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                        lineNumber: 724,
+                        lineNumber: 740,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Typography$2f$Typography$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Typography$3e$__["Typography"], {
@@ -1077,7 +1092,7 @@ function Archivos() {
                         children: "En esta sección se podrá generar un reporte de los estudiantes que se encuentran en el Sistema de Seminario de Título UV."
                     }, void 0, false, {
                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                        lineNumber: 727,
+                        lineNumber: 743,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
@@ -1085,7 +1100,7 @@ function Archivos() {
                         color: "success",
                         startIcon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$icons$2d$material$40$7$2e$3$2e$11_$5f$138bb24b816733e1ac507df1068f8b35$2f$node_modules$2f40$mui$2f$icons$2d$material$2f$esm$2f$Send$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                            lineNumber: 733,
+                            lineNumber: 749,
                             columnNumber: 40
                         }, void 0),
                         onClick: handleReporteFileDownload,
@@ -1102,13 +1117,13 @@ function Archivos() {
                         children: "Descargar reporte de estudiantes"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                        lineNumber: 730,
+                        lineNumber: 746,
                         columnNumber: 25
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                lineNumber: 723,
+                lineNumber: 739,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Card$2f$Card$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Card$3e$__["Card"], {
@@ -1131,7 +1146,7 @@ function Archivos() {
                         children: "Gestión de Documentos Individuales"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                        lineNumber: 751,
+                        lineNumber: 767,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Typography$2f$Typography$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Typography$3e$__["Typography"], {
@@ -1144,7 +1159,7 @@ function Archivos() {
                         children: "Aquí puedes subir archivos específicos para cada estudiante."
                     }, void 0, false, {
                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                        lineNumber: 754,
+                        lineNumber: 770,
                         columnNumber: 17
                     }, this),
                     showPageEliminar && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DeletePage, {
@@ -1154,7 +1169,7 @@ function Archivos() {
                         ActionAction: ()=>callActualizado('estudiante')
                     }, void 0, false, {
                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                        lineNumber: 759,
+                        lineNumber: 775,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Box$2f$Box$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Box$3e$__["Box"], {
@@ -1167,13 +1182,13 @@ function Archivos() {
                                 onClick: ()=>setFinished(true),
                                 startIcon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$icons$2d$material$40$7$2e$3$2e$11_$5f$138bb24b816733e1ac507df1068f8b35$2f$node_modules$2f40$mui$2f$icons$2d$material$2f$esm$2f$Refresh$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                     fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                    lineNumber: 767,
+                                    lineNumber: 783,
                                     columnNumber: 74
                                 }, void 0),
                                 children: "Recargar Estudiantes"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                lineNumber: 767,
+                                lineNumber: 783,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$x$2d$data$2d$grid$40$8$2e$29$2e$1_$40$em_9bdbc4026ec3144fb158f3c058c20a13$2f$node_modules$2f40$mui$2f$x$2d$data$2d$grid$2f$DataGrid$2f$DataGrid$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DataGrid"], {
@@ -1198,19 +1213,19 @@ function Archivos() {
                                 showToolbar: true
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                lineNumber: 770,
+                                lineNumber: 786,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                        lineNumber: 766,
+                        lineNumber: 782,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                lineNumber: 750,
+                lineNumber: 766,
                 columnNumber: 13
             }, this),
             actualizar && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ActualizarPage, {
@@ -1219,7 +1234,7 @@ function Archivos() {
                 estudiantes: estudiantes
             }, void 0, false, {
                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                lineNumber: 789,
+                lineNumber: 805,
                 columnNumber: 17
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Modal$2f$Modal$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Modal$3e$__["Modal"], {
@@ -1267,7 +1282,7 @@ function Archivos() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                            lineNumber: 825,
+                            lineNumber: 841,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$FormControl$2f$FormControl$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__FormControl$3e$__["FormControl"], {
@@ -1281,7 +1296,7 @@ function Archivos() {
                                     children: "Tipo de Documento"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                    lineNumber: 830,
+                                    lineNumber: 846,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Select$2f$Select$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Select$3e$__["Select"], {
@@ -1297,12 +1312,12 @@ function Archivos() {
                                                 children: "Selecciona un tipo"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                                lineNumber: 838,
+                                                lineNumber: 854,
                                                 columnNumber: 48
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                            lineNumber: 838,
+                                            lineNumber: 854,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$MenuItem$2f$MenuItem$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MenuItem$3e$__["MenuItem"], {
@@ -1310,7 +1325,7 @@ function Archivos() {
                                             children: "Ficha de Ingreso"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                            lineNumber: 839,
+                                            lineNumber: 855,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$MenuItem$2f$MenuItem$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MenuItem$3e$__["MenuItem"], {
@@ -1318,7 +1333,7 @@ function Archivos() {
                                             children: "Tesis"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                            lineNumber: 840,
+                                            lineNumber: 856,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$MenuItem$2f$MenuItem$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MenuItem$3e$__["MenuItem"], {
@@ -1326,7 +1341,7 @@ function Archivos() {
                                             children: "Rubrica Guía"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                            lineNumber: 841,
+                                            lineNumber: 857,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$MenuItem$2f$MenuItem$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MenuItem$3e$__["MenuItem"], {
@@ -1334,20 +1349,42 @@ function Archivos() {
                                             children: "Rubrica Informante"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                            lineNumber: 842,
+                                            lineNumber: 858,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                    lineNumber: 831,
+                                    lineNumber: 847,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                            lineNumber: 829,
+                            lineNumber: 845,
                             columnNumber: 21
+                        }, this),
+                        selectedFileType === 'tesis' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Box$2f$Box$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Box$3e$__["Box"], {
+                            sx: {
+                                display: 'flex',
+                                justifyContent: 'center'
+                            },
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$TextField$2f$TextField$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TextField$3e$__["TextField"], {
+                                sx: {
+                                    width: '300px'
+                                },
+                                label: "Nombre de la Tesis",
+                                value: nombreTesis,
+                                onChange: (e)=>setNombreTesis(e.target.value)
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
+                                lineNumber: 868,
+                                columnNumber: 29
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
+                            lineNumber: 862,
+                            columnNumber: 25
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$singleFileButton$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             onFileSelect: handleIndividualFileSelect,
@@ -1355,7 +1392,7 @@ function Archivos() {
                             acceptedFileTypes: ".pdf, .doc, .docx, .xlsx, .xls"
                         }, fileInputKey, false, {
                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                            lineNumber: 846,
+                            lineNumber: 878,
                             columnNumber: 21
                         }, this),
                         individualFileToUpload && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Typography$2f$Typography$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Typography$3e$__["Typography"], {
@@ -1370,13 +1407,13 @@ function Archivos() {
                                     children: individualFileToUpload.name
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                    lineNumber: 855,
+                                    lineNumber: 887,
                                     columnNumber: 51
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                            lineNumber: 854,
+                            lineNumber: 886,
                             columnNumber: 25
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Box$2f$Box$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Box$3e$__["Box"], {
@@ -1396,14 +1433,14 @@ function Archivos() {
                                     children: "Cancelar"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                    lineNumber: 860,
+                                    lineNumber: 892,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
                                     variant: "contained",
                                     startIcon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$icons$2d$material$40$7$2e$3$2e$11_$5f$138bb24b816733e1ac507df1068f8b35$2f$node_modules$2f40$mui$2f$icons$2d$material$2f$esm$2f$Send$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                        lineNumber: 865,
+                                        lineNumber: 897,
                                         columnNumber: 40
                                     }, void 0),
                                     onClick: handleUploadIndividualFile,
@@ -1414,24 +1451,24 @@ function Archivos() {
                                     children: "Subir"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                    lineNumber: 863,
+                                    lineNumber: 895,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                            lineNumber: 859,
+                            lineNumber: 891,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                    lineNumber: 810,
+                    lineNumber: 826,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                lineNumber: 797,
+                lineNumber: 813,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Modal$2f$Modal$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Modal$3e$__["Modal"], {
@@ -1479,7 +1516,7 @@ function Archivos() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                            lineNumber: 905,
+                            lineNumber: 938,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$FormControl$2f$FormControl$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__FormControl$3e$__["FormControl"], {
@@ -1493,7 +1530,7 @@ function Archivos() {
                                     children: "Tipo de Documento"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                    lineNumber: 910,
+                                    lineNumber: 943,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Select$2f$Select$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Select$3e$__["Select"], {
@@ -1509,12 +1546,12 @@ function Archivos() {
                                                 children: "Selecciona un tipo"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                                lineNumber: 918,
+                                                lineNumber: 951,
                                                 columnNumber: 48
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                            lineNumber: 918,
+                                            lineNumber: 951,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$MenuItem$2f$MenuItem$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MenuItem$3e$__["MenuItem"], {
@@ -1522,7 +1559,7 @@ function Archivos() {
                                             children: "Ficha de Ingreso"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                            lineNumber: 919,
+                                            lineNumber: 952,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$MenuItem$2f$MenuItem$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MenuItem$3e$__["MenuItem"], {
@@ -1530,7 +1567,7 @@ function Archivos() {
                                             children: "Tesis"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                            lineNumber: 920,
+                                            lineNumber: 953,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$MenuItem$2f$MenuItem$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MenuItem$3e$__["MenuItem"], {
@@ -1538,7 +1575,7 @@ function Archivos() {
                                             children: "Rubrica Guía"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                            lineNumber: 921,
+                                            lineNumber: 954,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$MenuItem$2f$MenuItem$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MenuItem$3e$__["MenuItem"], {
@@ -1546,19 +1583,19 @@ function Archivos() {
                                             children: "Rubrica Informante"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                            lineNumber: 922,
+                                            lineNumber: 955,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                    lineNumber: 911,
+                                    lineNumber: 944,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                            lineNumber: 909,
+                            lineNumber: 942,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Box$2f$Box$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Box$3e$__["Box"], {
@@ -1578,14 +1615,14 @@ function Archivos() {
                                     children: "Cancelar"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                    lineNumber: 927,
+                                    lineNumber: 960,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
                                     variant: "contained",
                                     startIcon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$icons$2d$material$40$7$2e$3$2e$11_$5f$138bb24b816733e1ac507df1068f8b35$2f$node_modules$2f40$mui$2f$icons$2d$material$2f$esm$2f$Send$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                        lineNumber: 932,
+                                        lineNumber: 965,
                                         columnNumber: 40
                                     }, void 0),
                                     onClick: handleStudentFileDownload,
@@ -1596,34 +1633,34 @@ function Archivos() {
                                     children: "Bajar"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                    lineNumber: 930,
+                                    lineNumber: 963,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                            lineNumber: 926,
+                            lineNumber: 959,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                    lineNumber: 890,
+                    lineNumber: 923,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                lineNumber: 877,
+                lineNumber: 910,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-        lineNumber: 663,
+        lineNumber: 679,
         columnNumber: 9
     }, this);
 }
-_s(Archivos, "EBqIQbLCgZOaTr9Riiv1On2SesM=");
+_s(Archivos, "tutgr1+2B0MDTe6ZRKiAaNhhP2k=");
 _c = Archivos;
 const __TURBOPACK__default__export__ = Archivos;
 function ActualizarPage(param) {
@@ -1676,7 +1713,7 @@ function ActualizarPage(param) {
                 children: "Ingrese los datos que quiere actualizar"
             }, void 0, false, {
                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                lineNumber: 1006,
+                lineNumber: 1039,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Box$2f$Box$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Box$3e$__["Box"], {
@@ -1711,7 +1748,7 @@ function ActualizarPage(param) {
                                     })
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                lineNumber: 1027,
+                                lineNumber: 1060,
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$TextField$2f$TextField$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TextField$3e$__["TextField"], {
@@ -1728,7 +1765,7 @@ function ActualizarPage(param) {
                                     })
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                lineNumber: 1041,
+                                lineNumber: 1074,
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$TextField$2f$TextField$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TextField$3e$__["TextField"], {
@@ -1745,7 +1782,7 @@ function ActualizarPage(param) {
                                     })
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                lineNumber: 1055,
+                                lineNumber: 1088,
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$TextField$2f$TextField$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TextField$3e$__["TextField"], {
@@ -1762,13 +1799,13 @@ function ActualizarPage(param) {
                                     })
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                lineNumber: 1069,
+                                lineNumber: 1102,
                                 columnNumber: 17
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                        lineNumber: 1018,
+                        lineNumber: 1051,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Box$2f$Box$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Box$3e$__["Box"], {
@@ -1795,7 +1832,7 @@ function ActualizarPage(param) {
                                     })
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                lineNumber: 1094,
+                                lineNumber: 1127,
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$TextField$2f$TextField$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TextField$3e$__["TextField"], {
@@ -1812,13 +1849,13 @@ function ActualizarPage(param) {
                                     })
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                lineNumber: 1108,
+                                lineNumber: 1141,
                                 columnNumber: 17
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                        lineNumber: 1083,
+                        lineNumber: 1116,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Box$2f$Box$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Box$3e$__["Box"], {
@@ -1845,7 +1882,7 @@ function ActualizarPage(param) {
                                     })
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                lineNumber: 1132,
+                                lineNumber: 1165,
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$TextField$2f$TextField$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TextField$3e$__["TextField"], {
@@ -1862,7 +1899,7 @@ function ActualizarPage(param) {
                                     })
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                lineNumber: 1146,
+                                lineNumber: 1179,
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$TextField$2f$TextField$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TextField$3e$__["TextField"], {
@@ -1879,7 +1916,7 @@ function ActualizarPage(param) {
                                     })
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                lineNumber: 1160,
+                                lineNumber: 1193,
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$TextField$2f$TextField$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TextField$3e$__["TextField"], {
@@ -1896,7 +1933,7 @@ function ActualizarPage(param) {
                                     })
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                lineNumber: 1174,
+                                lineNumber: 1207,
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$TextField$2f$TextField$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TextField$3e$__["TextField"], {
@@ -1913,7 +1950,7 @@ function ActualizarPage(param) {
                                     })
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                lineNumber: 1188,
+                                lineNumber: 1221,
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$TextField$2f$TextField$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TextField$3e$__["TextField"], {
@@ -1930,19 +1967,19 @@ function ActualizarPage(param) {
                                     })
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                                lineNumber: 1202,
+                                lineNumber: 1235,
                                 columnNumber: 17
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                        lineNumber: 1122,
+                        lineNumber: 1155,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                lineNumber: 1009,
+                lineNumber: 1042,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Box$2f$Box$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Box$3e$__["Box"], {
@@ -1960,7 +1997,7 @@ function ActualizarPage(param) {
                         children: "Guardar"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                        lineNumber: 1225,
+                        lineNumber: 1258,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
@@ -1968,19 +2005,19 @@ function ActualizarPage(param) {
                         children: "Cerrar"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                        lineNumber: 1232,
+                        lineNumber: 1265,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                lineNumber: 1217,
+                lineNumber: 1250,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-        lineNumber: 991,
+        lineNumber: 1024,
         columnNumber: 9
     }, this);
 }
@@ -2027,21 +2064,21 @@ function DeletePage(param) {
                 children: "¿Está seguro de querer eliminar a"
             }, void 0, false, {
                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                lineNumber: 1298,
+                lineNumber: 1331,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Typography$2f$Typography$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Typography$3e$__["Typography"], {
                 children: nombre
             }, void 0, false, {
                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                lineNumber: 1301,
+                lineNumber: 1334,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Typography$2f$Typography$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Typography$3e$__["Typography"], {
                 children: "del Sistema de Seminario de Titulo de forma permanente?"
             }, void 0, false, {
                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                lineNumber: 1304,
+                lineNumber: 1337,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Box$2f$Box$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Box$3e$__["Box"], {
@@ -2064,7 +2101,7 @@ function DeletePage(param) {
                         children: "Si, borrar"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                        lineNumber: 1317,
+                        lineNumber: 1350,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$5$2e$19_react$2d$dom$40$19$2e$2$2e$7_react$40$19$2e$2$2e$7_$5f$react$40$19$2e$2$2e$7$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$mui$2b$material$40$7$2e$3$2e$11_$40$emoti_3037d02be1077922dfc0b1231c531764$2f$node_modules$2f40$mui$2f$material$2f$esm$2f$Button$2f$Button$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Button$3e$__["Button"], {
@@ -2072,19 +2109,19 @@ function DeletePage(param) {
                         children: "No, volver"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                        lineNumber: 1326,
+                        lineNumber: 1359,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-                lineNumber: 1308,
+                lineNumber: 1341,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(rutas)/administrador/components/archivos.tsx",
-        lineNumber: 1279,
+        lineNumber: 1312,
         columnNumber: 9
     }, this);
 }

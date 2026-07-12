@@ -177,15 +177,12 @@ function PageGestionamiento({ onGuardar, onClose, fila, estudiantes}: PageProps)
       zIndex: 1000, 
       top:"100px",
       left:"800px",
-      height:"400px",
-      width:"550px",
+      height:"300px",
+      width:"300px",
       borderColor:'black',
       border:1,
       borderRadius:'20px'
     }}>
-      <Typography variant='h5' sx={{ mb: 2, textAlign: 'center' }}>
-          Indique la acción que quiere realizar
-      </Typography>
       <Box 
       sx={{
         display:'flex',

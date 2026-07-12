@@ -1,0 +1,17 @@
+{
+  "pages": {},
+  "app": {
+    "[project]/src/app/(rutas)/jefatura/page": [
+      "static/media/Swis721BT-s.p.93da073a.ttf",
+      "static/media/Swis721BT italic-s.p.6395a48d.ttf",
+      "static/media/Swis721BT bold-s.p.6a404612.ttf",
+      "static/media/Swis721BT bold italic-s.p.27d1fe21.ttf",
+      "static/media/Swis721BT CN-s.p.fc1e6af1.ttf",
+      "static/media/Swis721BT CN bold-s.p.f0d56f21.ttf",
+      "static/media/Swis721BT CN bold italic-s.p.5a3d7a32.ttf",
+      "static/media/Swis721BT CN italic-s.p.802a6740.ttf"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pagesUsingSizeAdjust": false
+}

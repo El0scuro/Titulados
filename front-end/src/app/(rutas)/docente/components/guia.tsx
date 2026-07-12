@@ -252,16 +252,16 @@ function PageGestionamiento({ onGuardar, onClose, fila, estudiantes, correos, ma
           withCredentials: true
         });
         const data = {
-                nombre: estudiante?.nombre,
-                segundoNombre: estudiante?.segundoNombre,
-                apellido: estudiante?.apellido,
-                segundoApellido: estudiante?.segundoApellido,
-                mail: estudiante?.mail,
-                rut: estudiante?.rut,
-                tema_Tesis: tema
-            };
-        
-            await axios.patch(`${__url}/estudiante/actualizar/${estudiante.mail}`, data);
+            nombre: estudiante?.nombre,
+            segundoNombre: estudiante?.segundoNombre,
+            apellido: estudiante?.apellido,
+            segundoApellido: estudiante?.segundoApellido,
+            mail: estudiante?.mail,
+            rut: estudiante?.rut,
+            tema_Tesis: tema
+        };
+            
+        await axios.patch(`${__url}/estudiante/actualizar/${estudiante.mail}`, data);
         Swal.fire(
           "Subida exitosa",
           `Su ${tipo} ha sido subida correctamente`,
@@ -292,11 +292,6 @@ function PageGestionamiento({ onGuardar, onClose, fila, estudiantes, correos, ma
         response = await axios.get(`${__url}/${tipo}/${mailEstudiante}`,
           {responseType:'blob'}
         );
-        }else if(tipo === 'guia'){
-          response = await axios.get(`${__url}/${tipo}/${ruta}`,
-            {responseType:'blob'}
-          );
-        }
         if(!response){
           return;
         }
@@ -322,8 +317,38 @@ function PageGestionamiento({ onGuardar, onClose, fila, estudiantes, correos, ma
         document.body.appendChild(a);
         a.click();
         a.remove();
+        window.URL.revokeObjectURL(url);
+        }else if(tipo === 'guia'){
+          response = await axios.get(`${__url}/${tipo}/${ruta}`,
+            {responseType:'blob'}
+          );
+          if(!response){
+          return;
+        }
+        const blob = new Blob([response.data], { type: response.data.type });             
+        const url = window.URL.createObjectURL(blob);
+                
+        // Detectar extensión según tipo MIME
+        let extension = "";
+        if (blob.type === "application/pdf") {
+            extension = "pdf";
+        } else if (
+            blob.type ===
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        ) {
+            extension = "docx";
+        } else {
+            extension = "bin"; // fallback genérico
+        }
     
-        window.URL.revokeObjectURL(url); // buena práctica
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = `Rubrica_Guia.${extension}`; // nombre dinámico según tipo
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        window.URL.revokeObjectURL(url);
+        }
     
         Swal.fire("Descargado", "Archivo descargado correctamente", "success");
       } catch{
