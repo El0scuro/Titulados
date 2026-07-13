@@ -401,24 +401,7 @@ function Asignaciones() {
         }else if(asignacion?.rol === 'presidente'){
             tipoNota = 'notaPresidente';
         }
-        await axios.patch(`${__url}/notas/borrar/null`, {
-            mailEstudiante: asignacion?.mailEstudiante,
-            tipoNota
-        });
-    setFinished(true); // fuerza recarga desde el backend
-    };
-        if(!asignacion){
-            return;
-        }
-        let tipoNota;
-        if(asignacion.rol === 'guia'){
-            tipoNota = 'notaGuia';
-        }else if(asignacion.rol === 'informante'){
-            tipoNota = 'notaInformante';
-        }else if(asignacion.rol === 'presidente'){
-            tipoNota = 'notaPresidente';
-        }
-    
+        
         await axios.delete(`${__url}/asignaciones/borrar/${id}`);
         await axios.patch(`${__url}/notas/borrar/null`, { 
             mailEstudiante: asignacion?.mailEstudiante, 

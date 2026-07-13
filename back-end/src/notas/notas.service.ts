@@ -29,6 +29,19 @@ export class NotasService {
     }
     return notas;
   }
+  async notaNull(dto: UpdateNotaDto){
+    const {mailEstudiante, tipoNota} = dto;
+    const nota = await this.notaRepo.findOne({
+      where: {mailEstudiante}
+    });
+
+    if(!nota){
+      throw new NotFoundException('Notas no encontradas para el estudiante');
+    }
+
+    nota[tipoNota] = null;
+    return this.notaRepo.save(nota);
+  }
 
   findOne(id: number) {
     return `This action returns a #${id} nota`;

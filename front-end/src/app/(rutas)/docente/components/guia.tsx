@@ -317,22 +317,15 @@ function PageGestionamiento({ onGuardar, onClose, fila, estudiantes, correos, ma
         a.click();
         a.remove();
         window.URL.revokeObjectURL(url);
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
         }else if(tipo === 'guia'){
           response = await axios.get(`${__url}/${tipo}/${ruta}`,
             {responseType:'blob'}
           );
-<<<<<<< Updated upstream
           if(!response){
           return;
         }
-        const blob = new Blob([response.data], { type: response.data.type });             
-=======
-          const blob = new Blob([response.data], { type: response.data.type });             
->>>>>>> Stashed changes
+        const blob = new Blob([response.data], { type: response.data.type });                          
         const url = window.URL.createObjectURL(blob);
                 
         // Detectar extensión según tipo MIME
@@ -347,10 +340,7 @@ function PageGestionamiento({ onGuardar, onClose, fila, estudiantes, correos, ma
         } else {
             extension = "bin"; // fallback genérico
         }
-<<<<<<< Updated upstream
     
-=======
->>>>>>> Stashed changes
         const a = document.createElement("a");
         a.href = url;
         a.download = `Rubrica_Guia.${extension}`; // nombre dinámico según tipo
@@ -359,13 +349,10 @@ function PageGestionamiento({ onGuardar, onClose, fila, estudiantes, correos, ma
         a.remove();
         window.URL.revokeObjectURL(url);
         }
-<<<<<<< Updated upstream
     
-=======
         if(!response){
           return;
         }
->>>>>>> Stashed changes
         Swal.fire("Descargado", "Archivo descargado correctamente", "success");
       } catch{
         Swal.fire(
@@ -607,7 +594,7 @@ function PageGestionamiento({ onGuardar, onClose, fila, estudiantes, correos, ma
                 startIcon={<SendIcon />}
                 onClick={() => {
                   setTipo('guia');
-                  setRuta(`archivos_guia/Rubrica_Guia.docx`);
+                  setRuta(`archivos_guia/molde.docx`);
                   subir_descargar_Documento(accion, tipo, ruta)
                 }}
                 sx={{backgroundColor:'#003C58', color:'white'}}

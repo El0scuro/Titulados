@@ -49,9 +49,11 @@ constructor(private readonly archivosService: ArchivosService){}
           process.cwd(),
           'src/archivos/archivos_tesis'
           );
-          const archivos = fs.readdirSync(carpeta);
+          const archivos = fs
+          .readdirSync(carpeta)
+          .filter(archivo => !archivo.startsWith('.'));
           let ruta;
-          
+          console.log(archivos)
           for(let i = 0; i < archivos.length; i++){
             const sin_punto = archivos[i].split(".")[0];
               if(fileName === archivos[i] || 
@@ -95,36 +97,43 @@ async getArchivo(
   @Res() res: Response
 ) {
 
-  const nombres: Tesis[] = await this.archivosService.findAll();
-
   const partMail = mail.replace(/[^a-zA-Z0-9]/g, '_');
-  console.log('aa', partMail);
-  let nombreTesis;
 
-  for (let i = 0; i < nombres.length; i++) {
-    if (nombres[i].nombreArchivo.split('-')[0] === partMail) {
-      nombreTesis = nombres[i].nombreArchivo;
-        break;
-    }
+  const carpeta = join(
+    process.cwd(),
+    'src',
+    'archivos',
+    'archivos_tesis'
+  );
+
+  // Verificar que exista la carpeta
+  if (!fs.existsSync(carpeta)) {
+    return res.status(404).send('Carpeta de archivos no encontrada');
   }
 
-  if (!nombreTesis) {
+  // Obtener archivos reales del servidor
+  const archivos = fs.readdirSync(carpeta);
+
+  // Buscar el archivo que corresponde al estudiante
+  const archivoEncontrado = archivos.find(
+    archivo => archivo.split('-')[0] === partMail
+  );
+
+  if (!archivoEncontrado) {
     return res.status(404).send('No se encontró tesis para este correo');
   }
 
   const fullPath = join(
-    process.cwd(),
-    'src',
-    'archivos',
-    'archivos_tesis',
-    nombreTesis
+    carpeta,
+    archivoEncontrado
   );
 
+  // Verificar que el archivo exista
   if (!fs.existsSync(fullPath)) {
     return res.status(404).send('Archivo no encontrado en el servidor');
   }
 
-  res.download(fullPath, nombreTesis);
+  return res.download(fullPath, archivoEncontrado);
 }
   
 }

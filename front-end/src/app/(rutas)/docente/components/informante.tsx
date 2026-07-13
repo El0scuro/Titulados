@@ -344,7 +344,7 @@ function PageGestionamiento({ onGuardar, onClose, fila, estudiantes, correos, ma
             handleIndividualFileSelect(file); 
             setAccion('cargar');
             setTipo(fileInputKey1);
-            setRuta('rubrica_informante');
+            setRuta('Rubrica_informante');
             setMostrarCarga(true);
           }}
           onReset={() => setMostrarCarga(false)}
@@ -430,7 +430,7 @@ function PageGestionamiento({ onGuardar, onClose, fila, estudiantes, correos, ma
             <Button
               startIcon={<SendIcon />}
               onClick={() => {
-                subir_descargar_Documento('descargar', 'informante', `archivos_Informante/${partMail}-documento_informante.xlsx`);
+                subir_descargar_Documento('descargar', 'informante', `archivos_Informante/${partMail}-Rubrica_informante.xlsx`);
               }}
               sx={{
               backgroundColor:'#003C58', 

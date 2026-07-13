@@ -105,7 +105,7 @@ constructor(private readonly archivosService: ArchivosService){}
       return res.status(404).send('Archivo no encontrado');
     }
 
-    res.download(fullPath, 'documento_informante.xlsx');
+    res.download(fullPath, 'Rubrica_informante.xlsx');
   }
   
 }

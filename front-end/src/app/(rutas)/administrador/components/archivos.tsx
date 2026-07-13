@@ -336,12 +336,12 @@ function Archivos() {
                     setNombreTesis('');
                     break;
                 case "guia":
-                    axios.post(`${__url}/${selectedFileType}/rubrica_guia`, formData, {
+                    axios.post(`${__url}/${selectedFileType}/Rubrica_guia`, formData, {
                         withCredentials: true,
                     });
                     break;
                 case "informante":
-                    axios.post(`${__url}/${selectedFileType}/rubrica_informante`, formData, {
+                    axios.post(`${__url}/${selectedFileType}/Rubrica_informante`, formData, {
                         withCredentials: true,
                     });
                     break;
@@ -605,7 +605,7 @@ function Archivos() {
                     window.URL.revokeObjectURL(url); // buena práctica
                     break;
                 case "archivos_guia":
-                    response = await axios.get(`${__url}/guia/${selectedFileType}/${partMail}-documento_guia.docx`, 
+                    response = await axios.get(`${__url}/guia/${selectedFileType}/${partMail}-Rubrica_guia.docx`, 
                         { responseType: "blob" }
                     );
                     blob = new Blob([response.data]);
@@ -622,7 +622,7 @@ function Archivos() {
                     window.URL.revokeObjectURL(url); // buena práctica
                     break;
                 case "archivos_Informante":
-                    response = await axios.get(`${__url}/informante/${selectedFileType}/${partMail}-documento_informante.xlsx`, 
+                    response = await axios.get(`${__url}/informante/${selectedFileType}/${partMail}-Rubrica_informante.xlsx`, 
                         { responseType: "blob" }
                     );
                     blob = new Blob([response.data]);
@@ -630,7 +630,7 @@ function Archivos() {
 
                     a = document.createElement("a");
                     a.href = url;
-                    a.download = partMail + "-documento_informante.xlsx";
+                    a.download = partMail + "-Rubrica_informante.xlsx";
 
                     document.body.appendChild(a);
                     a.click();
@@ -897,7 +897,7 @@ function Archivos() {
                             variant="contained"
                             startIcon={<SendIcon />}
                             onClick={handleUploadIndividualFile}
-                            disabled={!selectedFileType || !individualFileToUpload || !nombreTesis} // Disable if type or file not selected
+                            disabled={!selectedFileType || !individualFileToUpload} // Disable if type or file not selected
                             sx={{ flexGrow: 1 }}
                         >
                             Subir

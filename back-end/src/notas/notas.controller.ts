@@ -26,11 +26,6 @@ export class NotasController {
     return this.notasService.notaNull(dto);
   }
 
-  @Patch('borrar/null')
-  notaNull(@Body() dto: UpdateNotaDto){
-    return this.notasService.notaNull(dto);  
-  }
-
   @Delete('borrar/:mail')
   remove(@Param('mail') mail: string) {
     return this.notasService.remove(mail);

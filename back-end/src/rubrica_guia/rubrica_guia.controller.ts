@@ -32,74 +32,106 @@ constructor(private readonly archivosService: ArchivosService){}
   }
 
   @Post('rubrica_guia')
-  
-  @UseInterceptors(
-    FileInterceptor('file', {
-      storage: diskStorage({
-        
-        destination: 'src/archivos/archivos_guia',
-        filename: async (
-          
-          req: UploadRequest,
-          file: Express.Multer.File,
-          cb: (error: Error | null, filename: string) => void
-        ) => {
-          const mail = req.body.mail || 'anon';
-          const partMail = mail.replace(/[^a-zA-Z0-9]/g, '_');
-          let fileName = `${partMail}-${file.originalname}`;
-          req.rep = 0;
-          req.nombreFinal = fileName;
-          const carpeta = path.join(
+@UseInterceptors(
+  FileInterceptor('file', {
+    storage: diskStorage({
+
+      destination: 'src/archivos/archivos_guia',
+
+      filename: async (
+        req: UploadRequest,
+        file: Express.Multer.File,
+        cb: (error: Error | null, filename: string) => void
+      ) => {
+
+        console.log("Archivo recibido:", file.originalname);
+
+        const mail = req.body.mail || 'anon';
+
+        const partMail = mail.replace(/[^a-zA-Z0-9]/g, '_');
+
+        let fileName = `${partMail}-${file.originalname}`;
+
+        req.rep = 0;
+
+        const carpeta = path.join(
           process.cwd(),
           'src/archivos/archivos_guia'
-          );
-          const archivos = fs.readdirSync(carpeta);
+        );
 
-          for (let i = 0; i < archivos.length; i++) {
-            const sin_punto = archivos[i].split(".")[0];
-            if(archivos[i] != "Rubrica_Guia.docx"){
-              if (
-                req.nombreFinal === archivos[i] ||
-                (fileName.length > archivos[i].length && fileName.includes(sin_punto))
 
-              ) {
-                const nombre = archivos[i];
+        // Crear carpeta si no existe
+        if (!fs.existsSync(carpeta)) {
+          fs.mkdirSync(carpeta, { recursive: true });
+        }
 
-                const ruta = path.join(
-                  process.cwd(),
-                  'src/archivos/archivos_guia',
-                  nombre
-                );
 
-                await fs.promises.unlink(ruta);
+        const archivos = fs.readdirSync(carpeta);
 
-                req.rep = 1;
-                fileName = nombre;
-                break;
-              }
-            }
-            
+
+        for (const archivo of archivos) {
+
+          // No borrar la rúbrica base
+          if (archivo === "Rmolde.docx") {
+            continue;
           }
 
-          cb(null, fileName);
-          
-        },
-      }),
+
+          // Si ya existe un archivo del mismo estudiante
+          if (archivo === fileName) {
+
+            const ruta = path.join(
+              carpeta,
+              archivo
+            );
+
+            await fs.promises.unlink(ruta);
+
+            req.rep = 1;
+
+            break;
+          }
+        }
+
+
+        // Guardamos el nombre definitivo
+        req.nombreFinal = fileName;
+
+
+        console.log("Nombre final:", fileName);
+
+
+        cb(null, fileName);
+      },
     }),
-  )
-  async uploadFile(
-    @UploadedFile() file: Express.Multer.File,
-    @Body('mail') mail: string,
-    @Req() req: any
-  ) {
-    console.log("Archivo recibido:", file);
-    console.log(req.nombreFinal)
-    if(req.rep === 1){
-      await this.archivosService.borrarRegistro(req.nombreFinal);
-    }
-    await this.archivosService.crearRegistro(mail, req.nombreFinal, file.path);
-    return {ok: true};
+  }),
+)
+async uploadFile(
+  @UploadedFile() file: Express.Multer.File,
+  @Body('mail') mail: string,
+  @Req() req: any
+) {
+
+  console.log("Archivo guardado:", file);
+  console.log("Nombre registro:", req.nombreFinal);
+
+
+  if (req.rep === 1) {
+    await this.archivosService.borrarRegistro(req.nombreFinal);
   }
+
+
+  await this.archivosService.crearRegistro(
+    mail,
+    req.nombreFinal,
+    file.path
+  );
+
+
+  return {
+    ok: true
+  };
+}
   
   @Get(':path(*)')
   getArchivo(
@@ -116,7 +148,7 @@ constructor(private readonly archivosService: ArchivosService){}
       return res.status(404).send('Archivo no encontrado');
     }
 
-    res.download(fullPath, 'rubrica guia.docx');
+    res.download(fullPath, 'Rubrica_guia.docx');
   }
   
 }
