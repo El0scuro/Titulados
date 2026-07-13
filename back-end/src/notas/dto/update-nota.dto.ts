@@ -14,6 +14,7 @@ export class UpdateNotaDto {
   @IsEnum(TipoNota)
   tipoNota: TipoNota;
 
+  
   @IsOptional()
   @IsNumber()
   @Min(1)

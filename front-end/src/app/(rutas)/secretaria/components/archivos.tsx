@@ -311,12 +311,12 @@ function Archivos() {
             try {
                 switch (selectedFileType){
                 case "ficha":
-                    axios.post(`${__url}/${selectedFileType}/ficha_inscripcion`, formData, {
+                    await axios.post(`${__url}/${selectedFileType}/ficha_inscripcion`, formData, {
                         withCredentials: true,
                     });
                     break;
                 case "tesis":
-                    axios.post(`${__url}/${selectedFileType}/Tesis`, formData, {
+                    await axios.post(`${__url}/${selectedFileType}/Tesis`, formData, {
                         withCredentials: true,
                     });
                     const estudiante = estudiantes.find(est => est.mail === selectedStudentIdForUpload);
@@ -336,12 +336,12 @@ function Archivos() {
                     setNombreTesis('');
                     break;
                 case "guia":
-                    axios.post(`${__url}/${selectedFileType}/rubrica_guia`, formData, {
+                    await axios.post(`${__url}/${selectedFileType}/rubrica_guia`, formData, {
                         withCredentials: true,
                     });
                     break;
                 case "informante":
-                    axios.post(`${__url}/${selectedFileType}/rubrica_informante`, formData, {
+                    await axios.post(`${__url}/${selectedFileType}/rubrica_informante`, formData, {
                         withCredentials: true,
                     });
                     break;

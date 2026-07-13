@@ -52,3 +52,17 @@ docker-compose.override.yml
 
 .cache/
 .npm/
+
+# Ignorar todo el contenido
+back-end/src/archivos/**
+
+# Pero mantener la estructura de carpetas
+!back-end/src/archivos/
+!back-end/src/archivos/archivos_guia/
+!back-end/src/archivos/archivos_tesis/
+!back-end/src/archivos/fichas_inscripcion/
+!back-end/src/archivos/archivos_informante/
+
+# Mantener únicamente los .gitkeep
+back-end/src/archivos/**/*
+!back-end/src/archivos/**/.gitkeep

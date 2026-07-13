@@ -1,6 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete} from '@nestjs/common';
 import { NotasService } from './notas.service';
 import { UpdateNotaDto } from './dto/update-nota.dto';
+import { UpdateEstadoDto } from 'src/estados/dto/update-estado.dto';
 
 @Controller('notas')
 export class NotasController {
@@ -23,6 +24,11 @@ export class NotasController {
   @Patch('borrar/null')
   notaNull(@Body() dto: UpdateNotaDto){
     return this.notasService.notaNull(dto);
+  }
+
+  @Patch('borrar/null')
+  notaNull(@Body() dto: UpdateNotaDto){
+    return this.notasService.notaNull(dto);  
   }
 
   @Delete('borrar/:mail')
