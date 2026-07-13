@@ -53,16 +53,36 @@ docker-compose.override.yml
 .cache/
 .npm/
 
-# Ignorar todo el contenido
-back-end/src/archivos/**
+# ============================
+# Archivos subidos por usuarios
+# ============================
 
-# Pero mantener la estructura de carpetas
-!back-end/src/archivos/
+# Ignorar todo el contenido de la carpeta archivos
+back-end/src/archivos/*
+
+# Mantener las carpetas
+!back-end/src/archivos/actas/
 !back-end/src/archivos/archivos_guia/
+!back-end/src/archivos/archivos_informante/
+!back-end/src/archivos/archivos_secretaria/
 !back-end/src/archivos/archivos_tesis/
 !back-end/src/archivos/fichas_inscripcion/
-!back-end/src/archivos/archivos_informante/
+!back-end/src/archivos/reporte_estudiantes/
+
+# Ignorar el contenido de cada carpeta
+back-end/src/archivos/actas/*
+back-end/src/archivos/archivos_guia/*
+back-end/src/archivos/archivos_informante/*
+back-end/src/archivos/archivos_secretaria/*
+back-end/src/archivos/archivos_tesis/*
+back-end/src/archivos/fichas_inscripcion/*
+back-end/src/archivos/reporte_estudiantes/*
 
 # Mantener únicamente los .gitkeep
-back-end/src/archivos/**/*
-!back-end/src/archivos/**/.gitkeep
+!back-end/src/archivos/actas/.gitkeep
+!back-end/src/archivos/archivos_guia/.gitkeep
+!back-end/src/archivos/archivos_informante/.gitkeep
+!back-end/src/archivos/archivos_secretaria/.gitkeep
+!back-end/src/archivos/archivos_tesis/.gitkeep
+!back-end/src/archivos/fichas_inscripcion/.gitkeep
+!back-end/src/archivos/reporte_estudiantes/.gitkeep
