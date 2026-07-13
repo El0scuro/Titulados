@@ -63,7 +63,7 @@ back-end/src/archivos/*
 # Mantener las carpetas
 !back-end/src/archivos/actas/
 !back-end/src/archivos/archivos_guia/
-!back-end/src/archivos/archivos_informante/
+!back-end/src/archivos/archivos_Informante/
 !back-end/src/archivos/archivos_secretaria/
 !back-end/src/archivos/archivos_tesis/
 !back-end/src/archivos/fichas_inscripcion/
@@ -72,7 +72,7 @@ back-end/src/archivos/*
 # Ignorar el contenido de cada carpeta
 back-end/src/archivos/actas/*
 back-end/src/archivos/archivos_guia/*
-back-end/src/archivos/archivos_informante/*
+back-end/src/archivos/archivos_Informante/*
 back-end/src/archivos/archivos_secretaria/*
 back-end/src/archivos/archivos_tesis/*
 back-end/src/archivos/fichas_inscripcion/*
@@ -81,7 +81,7 @@ back-end/src/archivos/reporte_estudiantes/*
 # Mantener únicamente los .gitkeep
 !back-end/src/archivos/actas/.gitkeep
 !back-end/src/archivos/archivos_guia/.gitkeep
-!back-end/src/archivos/archivos_informante/.gitkeep
+!back-end/src/archivos/archivos_Informante/.gitkeep
 !back-end/src/archivos/archivos_secretaria/.gitkeep
 !back-end/src/archivos/archivos_tesis/.gitkeep
 !back-end/src/archivos/fichas_inscripcion/.gitkeep
